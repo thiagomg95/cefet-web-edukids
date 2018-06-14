@@ -1,7 +1,10 @@
 /* Exercício 1: Criar uma transição para quando o mouse estiver em cima dos
  * botões play/stop (para que o elemento se revele lentamente)
  */
- #controles ul {}
+#controles ul
+ {
+   transition: 200ms ease-out;
+ }
 
 /*
  * Exercício 2: Você deve implementar uma metáfora visual para cada um dos 4
@@ -12,7 +15,16 @@
  *   - instinto-selvagem: animal dá um salto e cresce, com uma borda vermelha
  */
 .agitado {}
-.agitado img {}
+.agitado img
+{
+  animation: girando 0.5s ease-in-out 0s infinite alternate;
+}
+
+  @keyframes girando
+  {
+    from { transform: rotate(15deg); }
+    to   { transform: rotate(-15deg); }
+  }
 
 .alimentado {}
 .alimentado img {}
